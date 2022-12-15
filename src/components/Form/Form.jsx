@@ -4,6 +4,7 @@ import styles from "./Form.module.css";
 
 const Form = () => {
   const [location, setLocation] = useState('');
+
   const onSubmit = (e) => {
     e.preventDefault();
   };
@@ -15,7 +16,9 @@ const Form = () => {
         type="text"
         className={`${styles.input} form-control`}
         placeholder="Search for location"
-        required />
+        required
+        value={location}
+        onChange={e => setLocation(e.target.value)} />
 
       <button type="submit"
               className={ styles.button }
