@@ -16,7 +16,9 @@ const Form = () => {
         placeholder="Search for location"
         required />
 
-      <button type="submit" className={styles.button}>
+      <button type="submit"
+              className={ styles.button }
+              onClick={ onSubmit } >
         SEARCH
       </button>
     </form>
