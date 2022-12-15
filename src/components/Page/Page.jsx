@@ -1,4 +1,6 @@
 import React, { Fragment } from "react";
+import useForecast from "../../hooks/useForecast";
+
 import Header from "../Header";
 import Form from "../Form";
 import Error from "../Error";
@@ -7,6 +9,8 @@ import Forecast from "../Forecast";
 import styles from "./Page.module.css";
 
 const Page = () => {
+  useForecast();
+  
   return (
     <Fragment>
       <Header />
