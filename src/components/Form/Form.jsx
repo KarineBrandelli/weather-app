@@ -3,8 +3,12 @@ import React from "react";
 import styles from "./Form.module.css";
 
 const Form = () => {
+  const onSubmit = (e) => {
+    e.preventDefault();
+  };
+
   return (
-    <form>
+    <form onSubmit={ onSubmit }>
       <input
         aria-label="location"
         type="text"

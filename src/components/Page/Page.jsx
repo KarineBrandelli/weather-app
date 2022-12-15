@@ -12,9 +12,9 @@ const Page = () => {
       <Header />
       <div className={styles.box}>
         <Form />
-        <Error />
-        <Loader />
-        <Forecast />
+        {/* <Error /> */}
+        {/* <Loader /> */}
+        {/* <Forecast /> */}
       </div>
     </Fragment>
   );
