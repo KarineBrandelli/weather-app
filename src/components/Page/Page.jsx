@@ -17,7 +17,7 @@ const Page = () => {
       <div className={styles.box}>
         {!isLoading && <Form />}
 
-        {isError && <Error />}
+        {isError && <Error message={ isError }/>}
 
         {isLoading && <Loader />}
       </div>
