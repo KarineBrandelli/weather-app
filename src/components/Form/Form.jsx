@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 
 import styles from "./Form.module.css";
 
 const Form = () => {
+  const [location, setLocation] = useState('');
   const onSubmit = (e) => {
     e.preventDefault();
   };
