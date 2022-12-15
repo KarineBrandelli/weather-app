@@ -7,6 +7,8 @@ const Form = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
+
+    if (!location || location === '') return;
   };
 
   return (
