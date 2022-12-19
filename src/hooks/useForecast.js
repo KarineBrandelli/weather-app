@@ -11,7 +11,7 @@ const useForecast = () => {
   const [forecast, setForecast] = useState(null);
 
   const submitRequest = (location) => {
-    console.log({ location })
+    axios(REQUEST_URL)
   };
 
   return {
