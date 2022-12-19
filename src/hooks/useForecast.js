@@ -1,6 +1,8 @@
 import { useState } from "react";
 import axios from "axios";
 
+const BASE_URL = `http://api.weatherapi.com/v1/forecast.json?key=e28f5ea34d47486a80b194043221912`;
+
 const useForecast = () => {
   const [isError, setError] = useState(false);
   const [isLoading, setLoading] = useState(false);
@@ -8,24 +10,30 @@ const useForecast = () => {
 
   const getLocation = async (location) => {
     try {
-      const response = await axios(`http://api.weatherapi.com/v1/forecast.json?key=e28f5ea34d47486a80b194043221912&q=${location}&days=7&aqi=no&alerts=no`);
-
-      console.log({ response });
-      console.log({ location });
-
-      if (response.erro) {
+      const { data } = await axios(`${BASE_URL}&q=${ location }&days=7&aqi=no&alerts=no`);
+      const dataInformation = data.current;      
+      
+      console.log({ data });
+      console.log({ dataInformation });
+      
+      if (data.erro) {
         throw Error("There is no such location");
       }
+      
+      return data;
+      
     } catch (erro) {
       setError("There is no such location");
-    }
-  }
+    } 
+  };
 
-  const submitRequest = async (location) => {
+  const submitRequest = async location => {
+    setLoading(true);
+    setError(false);
 
+    const response = await getLocation(location);
 
-    const newResponse = await axios(`${response.data.location.lat} ${response.data.location.lon}`);
-    console.log(newResponse);
+    console.log(response);
   };
 
   return {
