@@ -28,6 +28,10 @@ const useForecast = () => {
     } 
   };
 
+  const gatherForecastData = (data) => {
+
+  };
+
   const submitRequest = async location => {
     setLoading(true);
     setError(false);
@@ -35,6 +39,8 @@ const useForecast = () => {
     const response = await getLocation(location);
 
     console.log(response);
+
+    gatherForecastData();
   };
 
   return {
