@@ -24,6 +24,7 @@ const useForecast = () => {
       
     } catch (erro) {
       setError("There is no such location");
+      setLoading(false);
     } 
   };
 
