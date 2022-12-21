@@ -12,16 +12,6 @@ const useForecast = () => {
   const [isLoading, setLoading] = useState(false);
   const [forecast, setForecast] = useState(null);
 
-  let weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-  let month = ["Januray", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-  const date = new Date();
-  const testeSemana = weekday[date.getDay()];
-  console.log(testeSemana)
-  console.log(month[date.getMonth()]);
-  console.log(date.getDate())
-  // const dateString = date.toDateString();
-  // console.log(dateString)
-
   const getLocation = async (location) => {
     try {
       const { data } = await axios(`${BASE_URL}&q=${ location }&days=7&aqi=no&alerts=no`);
