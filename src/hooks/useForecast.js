@@ -13,12 +13,14 @@ const useForecast = () => {
   const [forecast, setForecast] = useState(null);
 
   let weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  let month = ["Januray", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
   const date = new Date();
-  const testeSemana = semana[date.getDay()];
+  const testeSemana = weekday[date.getDay()];
   console.log(testeSemana)
-  console.log(date.getMonth() + 1);
-  const dateString = date.toDateString();
-  console.log(dateString)
+  console.log(month[date.getMonth()]);
+  console.log(date.getDate())
+  // const dateString = date.toDateString();
+  // console.log(dateString)
 
   const getLocation = async (location) => {
     try {
