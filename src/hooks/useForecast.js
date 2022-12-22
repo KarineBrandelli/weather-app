@@ -15,6 +15,14 @@ const useForecast = () => {
   const getLocation = async (location) => {
     try {
       const { data } = await axios(`${BASE_URL}&q=${ location }&days=7&aqi=no&alerts=no`);
+
+      console.log(data.forecast.forecastday[0])
+      console.log(data.forecast.forecastday[0].day.daily_chance_of_rain)
+      console.log(data.forecast.forecastday[0].day.avghumidity)
+      console.log(data.forecast.forecastday[0].day.maxwind_kph)
+      console.log(data.forecast.forecastday[0].day.maxtemp_c)
+      console.log(data.forecast.forecastday[0].day.mintemp_c)
+
       
       console.log(getCurrentDayForecast(data));      
       console.log({ data });
@@ -32,8 +40,8 @@ const useForecast = () => {
   };
 
   const gatherForecastData = (data) => {
-    getCurrentDayForecast();
-    // getCurrentDayDetailedForecast();
+    const currentDay = getCurrentDayForecast();
+    getCurrentDayDetailedForecast();
     // getUpcomingDaysForecast();
   };
 
