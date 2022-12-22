@@ -35,9 +35,9 @@ const useForecast = () => {
   };
 
   const gatherForecastData = (data) => {
-    const currentDay = getCurrentDayForecast();
-    const currentDayDetails = getCurrentDayDetailedForecast();
-    const upcomingDays = getUpcomingDaysForecast();
+    const currentDay = getCurrentDayForecast(data);
+    const currentDayDetails = getCurrentDayDetailedForecast(data);
+    const upcomingDays = getUpcomingDaysForecast(data);
 
     setForecast({ currentDay, currentDayDetails, upcomingDays });
     setLoading(false);

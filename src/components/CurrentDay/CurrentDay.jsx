@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import locationIcon from "./assets/location-pin.png";
 import styles from "./CurrentDay.module.css";
 
-const CurrentDay = ({weekday, date, country, location, temperature, weatherIcon, weatherDescription}) => (
+const CurrentDay = ({ weekday, date, country, location, temperature, weatherIcon, weatherDescription }) => (
   <div className="d-flex">
     <div className={styles.img}></div>
     <div className={styles.gradient}></div>
