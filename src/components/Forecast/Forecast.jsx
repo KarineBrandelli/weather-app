@@ -22,6 +22,7 @@ const Forecast = ({ forecast }) => (
         md={8}
         className="d-flex flex-column justify-content-between" >
           <CurrentDayDescription forecast={ forecast.currentDayDetails } />
+          <UpcomingDaysForecast { ...forecast.upcomingDays }/>
       </Col>
     </Row>
   </Container>
