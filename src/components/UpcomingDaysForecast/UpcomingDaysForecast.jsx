@@ -8,14 +8,14 @@ const UpcomingDaysForecast = ({ nextdaytemperature, firstImgUrl, firstweekday, t
     <li
       className={`${styles.weekday} d-flex flex-column justify-content-center align-items-center p-2`} >
         <img width="45" src={ firstImgUrl } alt="" />
-        <div>{ nextdaytemperature }</div>
         <div>{ firstweekday }</div>
+        <div>{ nextdaytemperature } <small><sup>o</sup>C</small></div>
 	  </li>
     <li
       className={`${styles.weekday} d-flex flex-column justify-content-center align-items-center p-2`} >
         <img width="45" src={ secondImgUrl } alt="" />
-        <div>{ twodaystemperature }</div>
         <div>{ secondweekday }</div>
+        <div>{ twodaystemperature } <small><sup>o</sup>C</small></div>
 	  </li>
   </ul>
 );
