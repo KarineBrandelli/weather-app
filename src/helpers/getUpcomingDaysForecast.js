@@ -16,10 +16,10 @@ let secondweekday = weekdays[currentDate.getDay() + 2].substring(0, 3);
 
 const getUpcomingDaysForecast = (data) => ({
   nextdaytemperature: Math.round(data.forecast.forecastday[1].day.maxtemp_c),
-  firstimgUrl: data.forecast.forecastday[1].day.condition.icon,
+  firstImgUrl: data.forecast.forecastday[1].day.condition.icon,
   firstweekday: firstweekday,
   twodaystemperature: Math.round(data.forecast.forecastday[2].day.maxtemp_c),
-  secondimgUrl: data.forecast.forecastday[1].day.condition.icon,
+  secondImgUrl: data.forecast.forecastday[2].day.condition.icon,
   secondweekday: secondweekday,
 });
 
