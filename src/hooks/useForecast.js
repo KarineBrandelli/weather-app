@@ -40,15 +40,16 @@ const useForecast = () => {
     const upcomingDays = getUpcomingDaysForecast();
 
     setForecast({ currentDay, currentDayDetails, upcomingDays });
+    setLoading(false);
   };
 
-  const submitRequest = async (location) => {
+  const submitRequest = async location => {
     setLoading(true);
     setError(false);
 
     const response = await getLocation(location);
 
-    gatherForecastData();
+    gatherForecastData(response);
   };
 
   return {
