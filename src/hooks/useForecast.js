@@ -19,8 +19,8 @@ const useForecast = () => {
       );
 
       console.log(data);
-      console.log(data.forecast.forecastday[1].day.maxtemp_c);
-      console.log(data.forecast.forecastday[1].day.condition.icon)
+      console.log(getCurrentDayForecast(data));
+      console.log(getCurrentDayDetailedForecast(data));
       console.log(getUpcomingDaysForecast(data));
 
       if (data.erro) {
@@ -38,6 +38,8 @@ const useForecast = () => {
     const currentDay = getCurrentDayForecast();
     const currentDayDetails = getCurrentDayDetailedForecast();
     const upcomingDays = getUpcomingDaysForecast();
+
+    setForecast({ currentDay, currentDayDetails, upcomingDays });
   };
 
   const submitRequest = async (location) => {
