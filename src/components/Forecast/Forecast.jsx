@@ -3,13 +3,19 @@ import PropTypes from 'prop-types';
 
 import { Container, Row, Col } from "react-bootstrap";
 
+import CurrentDay from '../CurrentDay';
+import CurrentDayDescription from '../CurrentDayDescription';
+import UpcomingDaysForecast from '../UpcomingDaysForecast';
+
 import styles from "./Forecast.module.css";
 
 const Forecast = ({forecast}) => (
   <Container className={styles.box}>
     <Row>
       <Col xs={12} md={4}>
-        <div className={styles.card}></div>
+        <div className={styles.card}>
+          <CurrentDay {...forecast.currentDay} />
+        </div>
       </Col>
       <Col
         xs={12}
