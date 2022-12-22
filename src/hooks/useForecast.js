@@ -16,18 +16,8 @@ const useForecast = () => {
     try {
       const { data } = await axios(`${BASE_URL}&q=${ location }&days=7&aqi=no&alerts=no`);
 
-      console.log(getCurrentDayDetailedForecast(data)); 
-
-      console.log(data.forecast.forecastday[0])
-      console.log(data.forecast.forecastday[0].day.daily_chance_of_rain)
-      console.log(data.forecast.forecastday[0].day.avghumidity)
-      console.log(data.forecast.forecastday[0].day.maxwind_kph)
-      console.log(data.forecast.forecastday[0].day.maxtemp_c)
-      console.log(data.forecast.forecastday[0].day.mintemp_c)
-
-      
-      console.log(getCurrentDayForecast(data));      
-      console.log({ data });
+      console.log(data)  
+      console.log(getUpcomingDaysForecast(data))    
       
       if (data.erro) {
         throw Error("There is no such location");
@@ -44,7 +34,7 @@ const useForecast = () => {
   const gatherForecastData = (data) => {
     const currentDay = getCurrentDayForecast();
     const currentDayDetails = getCurrentDayDetailedForecast();
-    // getUpcomingDaysForecast();
+    const upcomingDays = getUpcomingDaysForecast();
   };
 
   const submitRequest = async location => {
