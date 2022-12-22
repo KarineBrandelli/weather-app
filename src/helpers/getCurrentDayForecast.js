@@ -1,7 +1,28 @@
 import moment from "moment";
 
-let weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-let months = ["Januray", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+let weekdays = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+let months = [
+  "Januray",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
 
 let currentDate = new Date();
 let weekday = weekdays[currentDate.getDay()];
@@ -10,11 +31,11 @@ let date = currentDate.getDate();
 
 const getCurrentDayForecast = (data) => ({
   weekday: weekday,
-  date: `${month + ' ' + date}`,
+  date: `${month + " " + date}`,
   country: data.location.country,
   location: data.location.name,
   temperature: Math.round(data.current.temp_c),
-  // weatherIcon: `https://www.metaweather.com/static/img/weather/${data.weather_state_abbr}.svg`,
+  weatherIcon: data.current.condition.icon,
   weatherDescription: data.current.condition.text,
 });
 
