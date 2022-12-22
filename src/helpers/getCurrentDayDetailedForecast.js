@@ -14,11 +14,6 @@ const currentDayForecast = (data) => [
     value: Math.round(data.forecast.forecastday[0].day.maxwind_kph),
     unit: "km/h",
   },
-  // {
-  //   name: "air pressure",
-  //   value: data.air_pressure,
-  //   unit: "mb",
-  // },
   {
     name: "max temp",
     value: Math.round(data.forecast.forecastday[0].day.maxtemp_c),
