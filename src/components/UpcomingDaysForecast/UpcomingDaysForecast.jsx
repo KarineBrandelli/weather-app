@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import styles from "./UpcomingDaysForecast.module.css";
 
 const UpcomingDaysForecast = ({ nextdaytemperature, firstImgUrl, firstweekday, twodaystemperature, secondImgUrl, secondweekday }) => (
-  <ul className={`${ styles.weekList } d-flex justify-content-between p-0`} >
+  <ul className={`${ styles.weekList } d-flex justify-content-around p-0`} >
     <li
       className={`${styles.weekday} d-flex flex-column justify-content-center align-items-center p-2`} >
         <img width="45" src={ firstImgUrl } alt="" />
