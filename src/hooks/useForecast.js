@@ -48,6 +48,7 @@ const useForecast = () => {
     setError(false);
 
     const response = await getLocation(location);
+    if (!response) return;
 
     gatherForecastData(response);
   };
