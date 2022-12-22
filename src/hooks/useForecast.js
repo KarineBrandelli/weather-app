@@ -16,6 +16,8 @@ const useForecast = () => {
     try {
       const { data } = await axios(`${BASE_URL}&q=${ location }&days=7&aqi=no&alerts=no`);
 
+      console.log(getCurrentDayDetailedForecast(data)); 
+
       console.log(data.forecast.forecastday[0])
       console.log(data.forecast.forecastday[0].day.daily_chance_of_rain)
       console.log(data.forecast.forecastday[0].day.avghumidity)
@@ -41,7 +43,7 @@ const useForecast = () => {
 
   const gatherForecastData = (data) => {
     const currentDay = getCurrentDayForecast();
-    getCurrentDayDetailedForecast();
+    const currentDayDetails = getCurrentDayDetailedForecast();
     // getUpcomingDaysForecast();
   };
 

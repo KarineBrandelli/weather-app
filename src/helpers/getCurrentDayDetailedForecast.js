@@ -11,7 +11,7 @@ const currentDayForecast = (data) => [
   },
   {
     name: "wind",
-    value: data.forecast.forecastday[0].day.maxwind_kph,
+    value: Math.round(data.forecast.forecastday[0].day.maxwind_kph),
     unit: "km/h",
   },
   // {
