@@ -1,5 +1,3 @@
-import moment from "moment";
-
 let weekdays = [
   "Sunday",
   "Monday",

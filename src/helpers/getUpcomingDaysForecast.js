@@ -1,5 +1,3 @@
-// import moment from "moment";
-
 let weekdays = [
   "Sunday",
   "Monday",
@@ -11,7 +9,6 @@ let weekdays = [
 ];
 
 let currentDate = new Date();
-console.log(currentDate.getDay())
 let firstweekday = weekdays[(currentDate).getDay() + 1];
 let secondweekday = weekdays[(currentDate).getDay() + 2];
 
