@@ -1,4 +1,4 @@
-import moment from "moment";
+// import moment from "moment";
 
 let weekdays = [
   "Sunday",
@@ -11,8 +11,13 @@ let weekdays = [
 ];
 
 let currentDate = new Date();
-let firstweekday = weekdays[currentDate.getDay() + 1].substring(0, 3);
-let secondweekday = weekdays[currentDate.getDay() + 2].substring(0, 3);
+console.log(currentDate.getDay())
+let firstweekday = weekdays[(currentDate).getDay() + 1];
+let secondweekday = weekdays[(currentDate).getDay() + 2];
+
+if (firstweekday === 'Saturday') {
+  secondweekday = weekdays[0]
+};
 
 const getUpcomingDaysForecast = (data) => ({
   nextdaytemperature: Math.round(data.forecast.forecastday[1].day.maxtemp_c),
