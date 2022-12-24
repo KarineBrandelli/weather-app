@@ -11,9 +11,9 @@ A aplicação representa uma página de consulta a previsão do tempo, onde o us
 ## Preview 🔎
 
 <p align="center">
-  <img src="./src/assets/1.png" width=30%>
-  <img src="./src/assets/2.png" width=30%>
-  <img src="./src/assets/3.png" width=30%>
+  <img src="./src/assets/1.png" width=32%>
+  <img src="./src/assets/2.png" width=32%>
+  <img src="./src/assets/3.png" width=32%>
   <img src="./src/assets/4.png" width=70%>
 <p>
 
