@@ -5,7 +5,7 @@ import getCurrentDayForecast from "../helpers/getCurrentDayForecast.js";
 import getCurrentDayDetailedForecast from "../helpers/getCurrentDayDetailedForecast.js";
 import getUpcomingDaysForecast from "../helpers/getUpcomingDaysForecast.js";
 
-const BASE_URL = `http://api.weatherapi.com/v1/forecast.json?key=e28f5ea34d47486a80b194043221912`;
+const BASE_URL = `https://api.weatherapi.com/v1/forecast.json?key=e28f5ea34d47486a80b194043221912`;
 
 const useForecast = () => {
   const [isError, setError] = useState(false);
