@@ -9,46 +9,33 @@ let weekdays = [
 ];
 
 let currentDate = new Date();
-let weekday = currentDate.getDay()
+let weekday = currentDate.getDay();
 
-let firstweekday = weekdays[(currentDate).getDay() + 1];
-let secondweekday = weekdays[(currentDate).getDay() + 2];
+let firstweekday;
+let secondweekday;
 
-
-// if (firstweekday === 'Saturday') {
-//   secondweekday = weekdays[0]
-// }
-
-
-
-for (let i = 0; i < weekdays.length; i++) {
-  if (i = 0) {
-    firstweekday = "Monday";
-    secondweekday = "Tuesday";
-  } else if (i = 1) {
-    firstweekday = "Tuesday";
-    secondweekday = "Wednesday";
-  } else if (i = 2) {
-    firstweekday = "Wednesday";
-    secondweekday = "Thursday";
-  } else if (i = 3) {
-    firstweekday = "Thursday";
-    secondweekday = "Friday";
-  } else if (i = 4) {
-    firstweekday = "Friday";
-    secondweekday = "Saturday";
-  } else if (i = 5) {
-    firstweekday = "Saturday";
-    secondweekday = "Sunday";
-  } else if (i = 6) {
-    firstweekday = "Sunday";
-    secondweekday = "Monday";
-  }
-};
-
-// if (firstweekday === 'Sunday') {
-//   secondweekday = weekend
-// }
+if ( weekday === 0 ) {
+  firstweekday = "Monday";
+  secondweekday = "Tuesday";
+} else if ( weekday === 1 ) {
+  firstweekday = "Tuesday";
+  secondweekday = "Wednesday";
+} else if ( weekday === 2 ) {
+  firstweekday = "Wednesday";
+  secondweekday = "Thursday";
+} else if ( weekday === 3 ) {
+  firstweekday = "Thursday";
+  secondweekday = "Friday";
+} else if ( weekday === 4 ) {
+  firstweekday = "Friday";
+  secondweekday = "Saturday";
+} else if ( weekday === 5 ) {
+  firstweekday = "Saturday";
+  secondweekday = "Sunday";
+} else if ( weekday === 6 ) {
+  firstweekday = "Sunday";
+  secondweekday = "Monday";
+}
 
 const getUpcomingDaysForecast = (data) => ({
   nextdaytemperature: Math.round(data.forecast.forecastday[1].day.maxtemp_c),
