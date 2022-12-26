@@ -26,9 +26,9 @@ const Form = ({submitSearch}) => {
         onChange={e => setLocation(e.target.value)} />
 
       <button type="submit"
-              className={ styles.button }
-              onClick={ onSubmit } >
-        SEARCH
+        className={ styles.button }
+        onClick={ onSubmit } >
+          SEARCH
       </button>
     </form>
   );
