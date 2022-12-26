@@ -6,6 +6,7 @@ import Form from "../Form";
 import Error from "../Error";
 import Loader from "../Loader";
 import Forecast from "../Forecast";
+
 import styles from "./Page.module.css";
 
 const Page = () => {
@@ -20,14 +21,19 @@ const Page = () => {
       <Header />
       {!forecast && (
         <div className={`${styles.box} position-relative`}>
-          {!isLoading && <Form submitSearch={ onSubmit }/>}
+          {!isLoading && <Form submitSearch={onSubmit} />}
 
-          {isError && <Error message={ isError }/>}
+          {isError && <Error message={isError} />}
 
           {isLoading && <Loader />}
         </div>
       )}
-        {forecast && <Forecast forecast={ forecast } />}
+      {forecast && (
+        <div className={`${styles.center}`}>
+          {<Forecast forecast={forecast} />}
+          <button className={`${styles.new}`}>NEW SEARCH</button>
+        </div>
+      )}
     </Fragment>
   );
 };
