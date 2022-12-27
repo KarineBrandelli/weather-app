@@ -58,6 +58,7 @@ const useForecast = () => {
     isLoading,
     forecast,
     submitRequest,
+    setForecast
   };
 };
 

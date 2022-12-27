@@ -10,10 +10,14 @@ import Forecast from "../Forecast";
 import styles from "./Page.module.css";
 
 const Page = () => {
-  const { isError, isLoading, forecast, submitRequest } = useForecast();
-
+  let { isError, isLoading, forecast, submitRequest, setForecast } = useForecast();
+  
   const onSubmit = (value) => {
     submitRequest(value);
+  };
+  
+  const newSearch = () => {
+    setForecast(null);
   };
 
   return (
@@ -21,17 +25,21 @@ const Page = () => {
       <Header />
       {!forecast && (
         <div className={`${styles.box} position-relative`}>
-          {!isLoading && <Form submitSearch={onSubmit} />}
+          {!isLoading && <Form submitSearch={ onSubmit } />}
 
-          {isError && <Error message={isError} />}
+          {isError && <Error message={ isError } />}
 
           {isLoading && <Loader />}
         </div>
       )}
       {forecast && (
-        <div className={`${styles.center}`}>
-          {<Forecast forecast={forecast} />}
-          <button className={`${styles.new}`}>NEW SEARCH</button>
+        <div className={`${ styles.center }`}>
+          {<Forecast forecast={ forecast } />}
+          <button
+            className={`${ styles.new }`}
+            onClick={ newSearch }>
+              NEW SEARCH
+          </button>
         </div>
       )}
     </Fragment>
