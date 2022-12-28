@@ -10,7 +10,7 @@ import Forecast from "../Forecast";
 import styles from "./Page.module.css";
 
 const Page = () => {
-  let { isError, isLoading, forecast, submitRequest, setForecast } = useForecast();
+  const { isError, isLoading, forecast, submitRequest, setForecast } = useForecast();
   
   const onSubmit = (value) => {
     submitRequest(value);

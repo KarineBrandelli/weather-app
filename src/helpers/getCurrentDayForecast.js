@@ -7,6 +7,7 @@ let weekdays = [
   "Friday",
   "Saturday",
 ];
+
 let months = [
   "Januray",
   "February",
@@ -30,7 +31,7 @@ let date = currentDate.getDate();
 const getCurrentDayForecast = (data) => ({
   weekday: weekday,
   date: `${month + " " + date}`,
-  country: data.location.country,
+  country: data.location.country, // add
   location: data.location.name,
   temperature: Math.round(data.current.temp_c),
   weatherIcon: data.current.condition.icon,
