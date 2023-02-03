@@ -1,32 +1,33 @@
-<h1 align="center"> Weather App | React </h1>
-
-## Descrição ✏️
-
-<p align="justify">
-A aplicação representa uma página de consulta a previsão do tempo, onde o usuário preenche no campo de pesquisa a cidade que deseja saber a previsão do tempo do dia atual e também para os próximos dois dias. Foi utilizada para a aplicação a <a href="https://www.weatherapi.com/">WeatherAPI</a>, que fornece acesso gratuito a dados meteorológicos e geográficos por meio de uma API restful JSON.
-</p>
-
-<hr>
-
-## Preview 🔎
+<h1 align="center"> Previsão do Tempo ☀️🌤️🌩️ </h1>
 
 <p align="center">
-  <img src="./src/assets/1.png" width=32%>
-  <img src="./src/assets/2.png" width=32%>
-  <img src="./src/assets/3.png" width=32%>
-  <img src="./src/assets/4.png" width=70%>
-<p>
+  Uma aplicação web de uma página para consulta da previsão do tempo desenvolvida com React.js.
+</p>
 
-<hr>
+------
+## Como acessar a página?
 
-## Tecnologias ⚒️
+Você pode acessar a aplicação utilizando um computador, tablet ou celular clicando [nesse]() link.
 
-O projeto foi desenvolvido com as seguintes tecnologias:
+Se você deseja clonar esse repositório em sua máquina, certifique-se que você tem o `nodejs` instalado e em seguida rode o seguinte comando no terminal para a instalação das dependências:
 
-- HTML
-- CSS
-- JavaScript
-- DOM
-- React
+```bash
+npm install
+```
 
-<hr>
+Depois de instalar as dependências, rode o comando:
+```bash
+npm start
+```
+
+<p align="center">
+  <img alt="App Layout" src="https://user-images.githubusercontent.com/108953489/216395789-55b863c0-c851-45b6-9985-1189b91ec2db.gif" width="80%">
+</p>
+
+## Tecnologias utilizadas
+
+Tecnologias utilizadas e suas documentações:
+
+- [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
+- [React](https://reactjs.org/)
+- [Weather API](https://www.weatherapi.com/)
